@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { interceptorProviders } from './intreceptors/interceptors';
+import { AjaxBusyIndicatorDirective } from './directives/ajax-busy-indicator.directive';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AjaxBusyIndicatorDirective
   ],
   imports: [
     BrowserModule,

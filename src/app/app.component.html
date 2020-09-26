@@ -21,6 +21,11 @@
         <div class="flex-container wrapper">
             <section class="content">
                 <div>
+                    <div class="loader inactive" style="text-align:center;" ajax-busy-indicator hideDelay="900"></div>
+                </div>
+
+
+                <div>
                     <button (click)="requestXMLData()">request XML Data</button>
                     <pre>{{data2}}</pre>
                 </div>

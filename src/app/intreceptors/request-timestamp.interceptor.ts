@@ -3,12 +3,13 @@ import { HttpInterceptor, HttpEvent, HttpHandler, HttpRequest, HttpResponse, Htt
 import { Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root'
+})
 export class RequestTimestampInterceptor implements HttpInterceptor {
 
 
     intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-
         const startTime = (new Date()).getTime();
 
         return next.handle(req).pipe(
