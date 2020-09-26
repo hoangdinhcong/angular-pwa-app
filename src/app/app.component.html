@@ -18,25 +18,12 @@
 
     <main>
 
-
         <div class="flex-container wrapper">
             <section class="content">
-                Content
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus
-                    est
-                    exemplis hoc facere longius.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus
-                    est
-                    exemplis hoc facere longius.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sumenda potius quam expetenda. Nihil opus
-                    est
-                    exemplis hoc facere longius.
-                </p>
+                <div>
+                    <button (click)="requestXMLData()">request XML Data</button>
+                    <pre>{{data2}}</pre>
+                </div>
             </section>
 
             <aside>
@@ -51,6 +38,8 @@
 
 
     </main>
+
+
     <footer>
         Footer
         <p>
@@ -58,4 +47,5 @@
             exemplis hoc facere longius.
         </p>
     </footer>
+
 </div>

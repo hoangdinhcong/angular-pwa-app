@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { SwUpdate } from '@angular/service-worker';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +9,10 @@ import { SwUpdate } from '@angular/service-worker';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(private swUpdate: SwUpdate) {
+
+  data1; data2;
+
+  constructor(private swUpdate: SwUpdate, private http: HttpClient) {
 
   }
 
@@ -20,5 +25,11 @@ export class AppComponent implements OnInit {
         }
       });
     }
+  }
+
+  requestXMLData(): void {
+    this.http.get('https://api.openweathermap.org/data/2.5/weather?q=London&mode=xml&appid=25a0801691214cdec4c44e5b125b6396')
+      .pipe(take(1))
+      .subscribe(body => { console.log(body), this.data2 = JSON.stringify(body); });
   }
 }
