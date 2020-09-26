@@ -3,7 +3,7 @@ import { HttpInterceptor, HttpEvent, HttpHandler, HttpRequest } from '@angular/c
 import { Observable } from 'rxjs';
 import { finalize, tap } from 'rxjs/operators';
 
-import { AjaxBusyNotifierService } from '../services/ajax-busy-notifier.service';
+import { AjaxBusyNotifierService } from './ajax-busy-notifier.service';
 
 @Injectable({
     providedIn: 'root'

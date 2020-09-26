@@ -1,9 +1,9 @@
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { XML2JsonInterceptor } from './xml2-json.interceptor';
-import { RequestTimestampInterceptor } from './request-timestamp.interceptor';
-import { AjaxBusyIdentifierInterceptor } from './ajax-busy-identifier.interceptor';
-import { AuthInterceptor } from './auth.interceptor';
+import { XML2JsonInterceptor } from './response-format/xml2-json.interceptor';
+import { RequestTimestampInterceptor } from './request-timestamp/request-timestamp.interceptor';
+import { AjaxBusyIdentifierInterceptor } from './ajax-busy-indicator/ajax-busy-identifier.interceptor';
+import { AuthInterceptor } from './auth/auth.interceptor';
 
 export const interceptorProviders =
     [

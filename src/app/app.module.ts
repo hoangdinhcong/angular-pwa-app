@@ -5,22 +5,20 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { interceptorProviders } from './intreceptors/interceptors';
-import { AjaxBusyIndicatorDirective } from './directives/ajax-busy-indicator.directive';
+import { AppRoutingModule } from './app-routing.module.ts';
+import { interceptorProviders } from './modules/interceptor-example/interceptors';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AjaxBusyIndicatorDirective
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    AppRoutingModule
   ],
-  providers: [
-    interceptorProviders
-  ],
+  providers: [interceptorProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,7 @@
 import { Directive, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 import { interval, Subscription } from 'rxjs';
 
-import { AjaxBusyNotifierService } from '../services/ajax-busy-notifier.service';
+import { AjaxBusyNotifierService } from './ajax-busy-notifier.service';
 
 @Directive({ selector: '[ajax-busy-indicator]' })
 export class AjaxBusyIndicatorDirective implements OnInit {
